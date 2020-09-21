@@ -1,0 +1,42 @@
+{
+  "name": "@enesusta/cors",
+  "version": "1.0.0",
+  "description": "Node.js CORS Middleware",
+  "author": "Enes Usta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enesusta/cors.git"
+  },
+  "bugs": {
+    "url": "https://github.com/enesusta/cors/issues"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "prepare": "yarn run build",
+    "test": "jest",
+    "cov": "jest --coverage",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "@types/jest": "^26.0.9",
+    "coveralls": "^3.1.0",
+    "jest": "^26.4.0",
+    "rollup": "^2.23.1",
+    "rollup-plugin-terser": "^6.1.0"
+  },
+  "homepage": "https://github.com/enesusta/cors#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
