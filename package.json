@@ -1,6 +1,6 @@
 {
   "name": "@enesusta/cors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node.js CORS Middleware",
   "author": "Enes Usta",
   "license": "MIT",
@@ -19,7 +19,8 @@
     "npm": ">=5"
   },
   "scripts": {
-    "build": "rollup -c",
+    "clean": "rm -rf dist",
+    "build": "yarn clean && rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
     "test": "jest",
@@ -27,7 +28,6 @@
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.4.0",
     "@types/jest": "^26.0.9",
     "coveralls": "^3.1.0",
